@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- navbar start-->
+
+
+<div class="container mt-5">
+  <div class="card p-3">
+    {% include 'includes/navbar.html' %}
+    <div class="container">
+        <div>
+          <nav class="navbar-inline nav-menu">			
+          <a class="active aa" href="{% url 'personal' %}" title="">Personal</a>&nbsp;&nbsp;&nbsp;
+          |&nbsp;&nbsp;&nbsp;
+          <a class="aa" href="{% url 'professional' %}" title=""><u>Professional</u></a>&nbsp;&nbsp;&nbsp;
+          |&nbsp;&nbsp;&nbsp;
+          <a class="aa" href="{% url 'achievements' %}" title="">Achievements</a>
+          </nav>
+      </div>
+    </div>
+    <hr>
+    <div class="container mt-3">
+        <table>
+            <tr style="color:rgb(0, 0, 0);">
+                <td width="100px">Date</td>
+                <td>Project</td>
+                <td>Description</td>
+                <td>Tech Stack</td>
+            </tr>
+            {% for professional_project  in professional_project_list %}
+            <tr>
+                <td>{{professional_project.date}}</td>
+                <td style="text-align: left;">{{professional_project.project_name | safe}}</td>
+                <td style="text-align: left;">{{professional_project.description | safe}}</td>
+                <td style="text-align: left;">{{professional_project.tech_stack | safe}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+  </div>
+</div>
+
+{% include 'includes/footer.html' %}
+
+{% endblock %}

@@ -1,0 +1,97 @@
+:root {
+	--primary: #f5f5f5;
+	--secondary: #3a3e45;
+	--white: #888787;
+	--accent: #000000;
+}
+
+body {
+	background-color: var(--primary);
+	color: rgb(0, 0, 0);
+}
+
+/* a {
+	color: #fff;
+} */
+
+h2,
+h3 {
+	color: var(--accent);
+}
+.btn-accent {
+	background-color: var(--accent);
+	color: #fff;
+	border-color: var(--accent);
+	outline: none;
+}
+.btn-accent:hover {
+	color: #fff;
+}
+
+button:hover {
+	animation: pulse; /* referring directly to the animation's @keyframe declaration */
+	animation-duration: 0.5s;
+}
+
+.form-control[type='text'],
+[type='textarea'],
+[type='email'],
+[type='password'] {
+	padding: 20px 25px;
+	font-size: 19px;
+	border-radius: 8px;
+}
+textarea {
+	padding: 20px 25px;
+	font-size: 19px;
+	border-radius: 8px;
+}
+
+.card {
+	color: var(--secondary);
+	width: 100%
+}
+
+main {
+	overflow: hidden;
+}
+
+table {
+	margin-left: 1%;
+	margin-right: 1%;
+	font-size: 14px;
+	height: 100%;
+	table-layout: fixed;
+}
+
+td {
+	border: .5px solid rgb(109, 105, 105);
+	text-align: center;
+	padding: 10px;
+}
+
+
+
+.page-item.disabled .page-link,
+.page-link {
+	background-color: var(--accent);
+	border: none;
+	padding: 10px 20px;
+	line-height: none;
+	color: #fff;
+	margin: 0 3px;
+	border-radius: 3px;
+}
+
+.page-link:hover {
+	background-color: var(--accent);
+
+	color: var(--white);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 14px;
+	width: 95%;
+}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- navbar start-->
+
+
+<div class="container  mt-5">
+  <div class="card p-3">
+    {% include 'includes/navbar.html' %}
+
+    <div class="d-flex bd-highlight">
+        <div class="p-2 w-100 bd-highlight">
+            <h2>{{name}}</h2>
+            <h5>{{title}}</h5>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h5>Current Role : {{role}}</h5>
+            <h5>Current Org  : {{org}}</h5>
+        </div>
+        <div class="p-2 flex-shrink-1 bd-highlight">
+            <img src="{% static './assets/images/sabarish_pic.png' %}" alt="" width="150" height="140" alt="" loading="lazy">
+        </div>
+    </div>
+
+    <hr>
+
+    <section class="container mt-5 mb-5">
+      <div class="row ">
+            {% for description  in career_description %}
+                <p class="card-text">{{description.description | safe}}</p>
+            {% endfor %}
+      </div>
+    </section>
+
+
+  </div>
+</div>
+
+{% include 'includes/footer.html' %}
+
+{% endblock %}

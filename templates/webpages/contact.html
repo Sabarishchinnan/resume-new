@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- navbar start-->
+
+
+<div class="container  mt-5">
+  <div class="card p-3">
+    {% include 'includes/navbar.html' %}
+    <div class="container mt-3">
+      <p>{{name}}</p>
+      <p>{{phone}}</p>
+      <p>{{email}}</p>
+      <p>{{field1}}</p>
+      <p><a href="{{field3}}">{{field2}}</a></p>  
+    </div>
+    
+  </div>
+</div>
+
+{% include 'includes/footer.html' %}
+
+{% endblock %}

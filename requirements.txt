@@ -1,0 +1,46 @@
+asgiref==3.3.1
+Django==3.1.4
+gunicorn==20.0.4
+pytz==2020.5
+sqlparse==0.4.1
+psycopg2
+django-ckeditor==6.0.0
+Pillow
+
+# git add . 
+# git commit -am "resume4"    
+# git push heroku master  
+# heroku logs -t 
+
+
+# Pip3 install pipenv
+# Pipenv shell
+# Pipenv install Pillow		for images
+# Pipenv install Django
+# django-admin startproject mysite
+
+# python3 manage.py runserver
+
+# pipenv install psycopg2-binary
+# python3 manage.py makemigrations
+# python3 manage.py migrate
+# python3 manage.py createsuperuser
+# python3 manage.py startapp webpages 
+
+#pip install djangocms-admin-style
+
+#python3 manage.py collectstatic    - to collect static files
+
+
+
+# heroku run python3 manage.py makemigrations
+# heroku run python3 manage.py migrate
+# heroku run python3 manage.py createsuperuser
+
+
+# ZS7197
+# sa2bwgwnus6fia1i
+# ztdvfxqlvkhltbmvbve2u14mse38if6k
+# d18fOLMCQAr21jhiaSEfaeGjzt6ws25k
+# nXBpSI4fE7M1vWw2XwGjRyIlOE15Z9i5
+	

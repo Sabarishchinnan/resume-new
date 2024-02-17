@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- navbar start-->
+
+
+<div class="container  mt-5">
+    <div class="card p-3">
+        {% include 'includes/navbar.html' %}
+        <div class="container">
+            <div>
+              <nav class="navbar-inline nav-menu">			
+              <a class="active aa" href="{% url 'personal' %}" title="">Personal</a>&nbsp;&nbsp;&nbsp;
+              |&nbsp;&nbsp;&nbsp;
+              <a class="aa" href="{% url 'professional' %}" title="">Professional</a>&nbsp;&nbsp;&nbsp;
+              |&nbsp;&nbsp;&nbsp;
+              <a class="aa" href="{% url 'achievements' %}" title=""><u>Achievements</u></a>
+              </nav>
+          </div>
+        </div>
+        <hr>
+        <section class="container mt-5 mb-5">
+                {% for achievements  in achievements_list %}
+                    <p class="card-text">{{achievements.description | safe}}</p>
+                {% endfor %}
+
+        </section>
+    
+    
+      </div>
+</div>
+
+{% include 'includes/footer.html' %}
+
+{% endblock %}
